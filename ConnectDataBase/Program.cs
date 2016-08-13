@@ -31,8 +31,7 @@ namespace ConnectDataBase
         {
             string con, sql;
             con = "Server=.;Database=shifenzheng;Trusted_Connection=SSPI";
-            sql = "select * from lianxi";
-            SqlConnection mycon = new SqlConnection(con);
+            mycon = new SqlConnection(con);
         }
     }
 }
