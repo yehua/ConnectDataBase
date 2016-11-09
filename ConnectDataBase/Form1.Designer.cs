@@ -33,10 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.fpSpread1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.panel1.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).BeginInit();
             this.SuspendLayout();
@@ -83,23 +82,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.fpSpread1);
-            this.panel1.Location = new System.Drawing.Point(0, 112);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(897, 439);
-            this.panel1.TabIndex = 5;
-            // 
             // fpSpread1
             // 
             this.fpSpread1.AccessibleDescription = "fpSpread1, Sheet1, Row 0, Column 0, 姓名";
-            this.fpSpread1.Location = new System.Drawing.Point(3, 3);
+            this.fpSpread1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fpSpread1.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
+            this.fpSpread1.Location = new System.Drawing.Point(2, 60);
             this.fpSpread1.Name = "fpSpread1";
             this.fpSpread1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.fpSpread1_Sheet1});
-            this.fpSpread1.Size = new System.Drawing.Size(891, 433);
-            this.fpSpread1.TabIndex = 0;
+            this.fpSpread1.Size = new System.Drawing.Size(1430, 700);
+            this.fpSpread1.TabIndex = 5;
+            this.fpSpread1.VerticalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             // 
             // fpSpread1_Sheet1
             // 
@@ -114,27 +110,40 @@
             this.fpSpread1_Sheet1.Cells.Get(0, 3).Value = "生日";
             this.fpSpread1_Sheet1.Cells.Get(0, 4).Value = "地址";
             this.fpSpread1_Sheet1.Cells.Get(0, 5).Value = "电话";
-            this.fpSpread1_Sheet1.ColumnHeader.Visible = false;
             this.fpSpread1_Sheet1.Columns.Get(1).Width = 116F;
             this.fpSpread1_Sheet1.Columns.Get(3).Width = 86F;
             this.fpSpread1_Sheet1.Columns.Get(4).Width = 144F;
             this.fpSpread1_Sheet1.RowHeader.Columns.Default.Resizable = false;
             this.fpSpread1_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(730, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 41);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "添加";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 546);
-            this.Controls.Add(this.panel1);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1433, 759);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.fpSpread1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "查询";
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).EndInit();
             this.ResumeLayout(false);
@@ -149,9 +158,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
         private FarPoint.Win.Spread.FpSpread fpSpread1;
         private FarPoint.Win.Spread.SheetView fpSpread1_Sheet1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
